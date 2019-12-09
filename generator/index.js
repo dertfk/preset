@@ -6,11 +6,11 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
-  api.render(files => {
-    Object.keys(files)
-      .filter(path => path.startsWith('src/') || path.startsWith('public/'))
-      .forEach(path => delete files[path]);
-  });
+  // api.render(files => {
+    // Object.keys(files)
+      // .filter(path => path.startsWith('src/') || path.startsWith('public/'))
+      // .forEach(path => delete files[path]);
+  // });
   
   // 复制并用 ejs 渲染 `./template` 内所有的文件
   api.render('./template')
